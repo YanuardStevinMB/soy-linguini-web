@@ -1,0 +1,133 @@
+/* Import elegante: Playfair Display (títulos) y Lora (cuerpo) */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600;700&display=swap');
+
+:root{
+	--cream: #f7f5f2;
+	--gold: #b38a4c;
+	--black: #0b0b0b;
+	--max-width: 1200px;
+}
+
+/* Hero wrapper */
+.hero{
+	background: var(--cream);
+	padding: 56px 20px;
+}
+
+.hero__inner{
+	max-width: var(--max-width);
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 40px;
+}
+
+.hero__left{
+	padding-right: 12px;
+}
+
+.hero__subtitle{
+	font-family: 'Lora', serif;
+	font-size: 0.95rem;
+	letter-spacing: 2px;
+	color: rgba(0,0,0,0.75);
+	margin: 0 0 12px 0;
+	font-style: italic;
+}
+
+.hero__title{
+	font-family: 'Playfair Display', serif;
+	font-size: 3.2rem;
+	line-height: 1.02;
+	margin: 0 0 16px 0;
+	color: var(--black);
+	font-weight: 700;
+}
+
+.hero__title .gold{
+	color: var(--gold);
+}
+
+.hero__lead{
+	font-family: 'Lora', serif;
+	font-size: 1.05rem;
+	color: rgba(0,0,0,0.85);
+	margin: 0 0 24px 0;
+	text-align: left;
+	/* Limitar a 4 líneas */
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	overflow: hidden;
+}
+
+.hero__actions{
+	display: flex;
+	gap: 14px;
+	align-items: center;
+}
+
+.btn{
+	display: inline-block;
+	padding: 12px 22px;
+	border-radius: 999px;
+	text-decoration: none;
+	font-family: 'Lora', serif;
+	font-weight: 600;
+	transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+.btn--primary{
+	background: var(--gold);
+	color: #fff;
+	border: 1px solid rgba(0,0,0,0.06);
+	box-shadow: 0 6px 18px rgba(179,138,76,0.12);
+}
+
+.btn--primary:hover{transform: translateY(-3px); box-shadow: 0 10px 28px rgba(179,138,76,0.16);}
+
+.btn--outline{
+	background: #fff;
+	color: var(--black);
+	border: 1px solid var(--black);
+}
+
+.btn--outline:hover{transform: translateY(-3px); opacity: .95}
+
+.hero__right{
+	display: flex;
+	justify-content: center;
+}
+
+.hero__image-wrap{
+	width: 100%;
+	max-width: 520px;
+}
+
+.hero__image{
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 16px;
+	object-fit: cover;
+	box-shadow: 0 18px 40px rgba(10,10,10,0.12);
+	border: 1px solid rgba(0,0,0,0.03);
+}
+
+/* Responsivo: columnas apiladas en pantallas pequeñas */
+@media (max-width: 880px){
+	.hero__inner{grid-template-columns: 1fr; gap: 28px;}
+	.hero__title{font-size: 2.4rem}
+	.hero__image-wrap{max-width: 420px;margin:0 auto}
+}
+
+@media (max-width: 480px){
+	.hero{padding: 36px 16px}
+	.hero__title{font-size: 1.8rem}
+	.btn{padding:10px 16px}
+}
+
+/* pequeño reset local para este componente */
+.container{width:100%;}
+
