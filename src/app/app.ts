@@ -1,11 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Navbar } from './core/components/navbar/navbar/navbar';
+import { DrinksCatalog } from './feature/drinks-catalog/drinks-catalog';
+import { FoodCatalog } from './feature/food-catalog/food-catalog';
+import { Welcome } from './feature/welcome/welcome';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, Navbar, DrinksCatalog,FoodCatalog,Welcome],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
   protected readonly title = signal('soy-linguini');

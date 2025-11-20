@@ -1,0 +1,15 @@
+<nav class="navbar">
+	<div class="navbar__container">
+		<div class="navbar__logo">
+			<!-- Texto de marca antes del logo, en negrilla -->
+			<img src="/assets/logo.jpeg" alt="Soy Linguini logo" />
+			<span class="navbar__brand"><strong>Soy Linguini</strong></span>
+		</div>
+
+		<ul class="navbar__menu">
+			<li *ngFor="let item of items" class="navbar__item">
+				<a href="#" class="navbar__link" (click)="$event.preventDefault()">{{ item }}</a>
+			</li>
+		</ul>
+	</div>
+</nav>
