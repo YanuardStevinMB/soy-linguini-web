@@ -1,0 +1,45 @@
+<section id="contacto" class="contact-section">
+  <div class="contact-inner">
+
+    <h2 class="contact-title">Ponte en Contacto</h2>
+
+    <p class="contact-desc">
+      Envíanos un mensaje por WhatsApp para hacer pedidos, reservas o consultas.
+    </p>
+
+    <div class="form-card">
+      <form class="form">
+
+        <div class="form-group">
+          <label>Tu Nombre</label>
+          <input
+            type="text"
+            name="name"
+            [(ngModel)]="formData.name"
+            placeholder="Juan García"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Tu Mensaje</label>
+          <textarea
+            name="message"
+            [(ngModel)]="formData.message"
+            rows="4"
+            placeholder="Estoy interesado en... / Quisiera solicitar..."
+          ></textarea>
+        </div>
+
+        <button type="button" (click)="handleWhatsApp()" class="btn-whatsapp">
+          Enviar por WhatsApp
+        </button>
+
+      </form>
+    </div>
+
+    <p class="contact-footer">
+      También puedes contactarnos directamente a través de WhatsApp
+    </p>
+
+  </div>
+</section>

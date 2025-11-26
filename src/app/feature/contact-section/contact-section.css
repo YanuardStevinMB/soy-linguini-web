@@ -1,0 +1,131 @@
+/* ===== Paleta local ===== */
+:host {
+  --bg: #111;
+  --bg2: #fff;
+
+  --text-light: #fff;      /* igual que catálogo */
+  --text-dark: #000;      /* igual que catálogo */
+  --text-muted: #cacaca;     /* igual que catálogo */
+  --card-border: #eee;        /* igual que catálogo */
+
+  --primary: #8b6f47;
+  --primary-foreground: #ffffff;
+  --accent: #313131;
+
+  --primary-rgb: 139, 92, 246;
+}
+
+/* ===== Sección general ===== */
+.contact-section {
+  background: var(--bg);
+  padding: 88px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-inner {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+}
+
+/* ===== Títulos ===== */
+.contact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-light);
+}
+
+.contact-desc {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 36px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ===== Card formulario ===== */
+.form-card {
+  background: var(--bg2);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 6px 18px rgba(21,21,21,0.04);
+  text-align: left;
+}
+
+/* ===== Formulario ===== */
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  font-family: 'Inter', sans-serif;
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  background: #ffffff;
+  font-size: 15px;
+  color: var(--text-dark);
+  outline: none;
+  transition: 0.2s border, 0.2s box-shadow;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.25);
+}
+
+/* ===== Botón WhatsApp ===== */
+.btn-whatsapp {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.btn-whatsapp:hover {
+  background: var(--accent);
+}
+
+/* ===== Footer ===== */
+.contact-footer {
+  margin-top: 28px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 56px 16px;
+  }
+
+  .contact-title {
+    font-size: 32px;
+  }
+
+  .form-card {
+    padding: 24px;
+  }
+}
