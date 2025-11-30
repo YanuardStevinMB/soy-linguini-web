@@ -4,11 +4,12 @@ import { Navbar } from './core/components/navbar/navbar/navbar';
 import { DrinksCatalog } from './feature/drinks-catalog/drinks-catalog';
 import { FoodCatalog } from './feature/food-catalog/food-catalog';
 import { Welcome } from './feature/welcome/welcome';
+import { ProcessSection } from './feature/process-section/process-section';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Navbar, DrinksCatalog,FoodCatalog,Welcome],
+  imports: [RouterOutlet, Navbar, DrinksCatalog,FoodCatalog,Welcome, ProcessSection],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
