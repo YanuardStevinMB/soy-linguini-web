@@ -4,6 +4,8 @@ import { ProcessSection } from './process-section';
 
 describe('ProcessSection', () => {
   let component: ProcessSection;
+
+  
   let fixture: ComponentFixture<ProcessSection>;
 
   beforeEach(async () => {
